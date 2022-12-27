@@ -5,7 +5,7 @@ const path = require('path');
 
 
 app.set('view engine', 'ejs');
-app.use('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/views'));
 
 app.get('/', (req,res)=>{
     res.send("server is working");
