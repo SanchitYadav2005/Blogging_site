@@ -1,2 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav{
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    background-color: #ffb703;
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.icon-link{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.5em;
+    text-decoration: none;
+    color: #48cae4;
+    text-transform: uppercase;
+
+}
+.nav-link{
+    text-decoration: none;
+}
+.nav-iteam{
+    list-style-type: none;
+}
