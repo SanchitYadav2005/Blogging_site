@@ -10,24 +10,27 @@ body{
 .site-nav{
     font-family: 'Manrope', sans-serif;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-section{
     background-color: #ffb703;
 }
 .nav-list{
     display: flex;
     flex-direction: row;
-    
 }
-
 .icon-link{
     font-family: 'Fjalla One', sans-serif;
     font-size: 2.5em;
     text-decoration: none;
     color: #48cae4;
     text-transform: uppercase;
-
 }
 .nav-link{
     text-decoration: none;
+    margin: 2em;
+    font-weight: bold;
 }
 .nav-iteam{
     list-style-type: none;
