@@ -57,9 +57,13 @@ body{
     font-family: 'Manrope', sans-serif;
     margin:5em;
 }
-.intro_section h1{
+.intro_section .intro{
     font-size: 3em;
     font-weight: bolder;
     text-align: center;
+    color: #5a189a;
+    text-transform: capitalize;
+}
+.intro-line{
     color: #2f3e46;
 }
