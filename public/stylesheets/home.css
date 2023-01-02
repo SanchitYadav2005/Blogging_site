@@ -53,7 +53,14 @@ body{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 5px;
 }
 
-.intro_section{
-    width: 100%;
-    height: fit-content;
+.intro_section{ 
+    font-family: 'Manrope', sans-serif;
+    margin:5em;
 }
+.intro_section h1{
+    font-size: 3em;
+    font-weight: bolder;
+    text-align: center;
+    color: #2f3e46;
+}
+
