@@ -52,3 +52,8 @@ body{
 #nav-button:hover{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 5px;
 }
+
+.intro_section{
+    width: 100%;
+    height: fit-content;
+}
