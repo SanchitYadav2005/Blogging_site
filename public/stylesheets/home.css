@@ -5,6 +5,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Manrope', sans-serif;
 }
 
 .site-nav{
@@ -67,4 +68,14 @@ body{
     color: #2f3e46;
     display: block;
     font-weight: lighter;
+}
+
+.intro_section .btn{
+    padding: 1em 3em 1em 3em;
+    border: 3px solid #2f3e46;
+    background-color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #2f3e46;
+    font-weight: bolder;
 }
