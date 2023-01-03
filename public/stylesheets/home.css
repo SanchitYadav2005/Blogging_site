@@ -58,12 +58,13 @@ body{
     margin:5em;
 }
 .intro_section .intro{
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bolder;
-    text-align: center;
     color: #5a189a;
     text-transform: capitalize;
 }
 .intro-line{
     color: #2f3e46;
+    display: block;
+    font-weight: lighter;
 }
