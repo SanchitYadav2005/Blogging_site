@@ -63,6 +63,7 @@ body{
     font-weight: bolder;
     color: #5a189a;
     text-transform: capitalize;
+    margin-top: 4em;
 }
 .intro-line{
     color: #2f3e46;
@@ -74,9 +75,15 @@ body{
 .intro_section .btn{
     padding: 1em 3em 1em 3em;
     border: 3px solid #2f3e46;
-    background-color: #ffffff;
+    color: #ffffff;
     font-size: 1.2em;
     cursor: pointer;
+    background-color: #2f3e46;
+    font-weight: bolder; 
+    transition: all 0.5s; 
+    margin-left: 39%;
+}
+.intro_section .btn:hover{
+    background-color: #ffffff;
     color: #2f3e46;
-    font-weight: bolder;
 }
