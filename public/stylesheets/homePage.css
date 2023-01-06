@@ -57,6 +57,9 @@ body{
 .intro_section{ 
     font-family: 'Manrope', sans-serif;
     margin:5em;
+    border-bottom: 3px solid #2f3e46;
+    padding-bottom: 15em;
+    margin-bottom: 5em;
 }
 .intro_section .intro{
     font-size: 3.5em;
@@ -86,4 +89,17 @@ body{
 .intro_section .btn:hover{
     background-color: #ffffff;
     color: #2f3e46;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+}
+.main img{
+    width: 60%;
+}
+.main blockquote{
+    font-size: 1.5em;
 }
