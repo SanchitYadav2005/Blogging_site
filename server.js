@@ -13,6 +13,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.get('/', (req,res)=>{
     res.render('pages/home');
 });
+app.get('/signUp',(req,res)=>{
+    res.render('pages/signUp');
+});
 
 
 app.listen(port, function(){
