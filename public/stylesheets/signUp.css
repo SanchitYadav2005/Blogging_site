@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+.container{
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3em;
+    background-color: #fcbf49;
+    border-radius: 1em;
+}
+.container img{
+    height: 500px;
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+.signupForm{
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+.container input{
+    display: block;
+    
+}
+
