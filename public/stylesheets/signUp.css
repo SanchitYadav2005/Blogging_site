@@ -4,9 +4,10 @@
     font-family: 'Manrope', sans-serif;
     display: flex;
     flex-direction: row;
-    margin-top: 3em;
     background-color: #fcbf49;
+    align-items:center;
     border-radius: 1em;
+    padding: 2em 2em 3em 2em;
 }
 .container img{
     height: 500px;
@@ -15,13 +16,31 @@
     margin-bottom: auto;
     
 }
-.signupForm{
-    margin-top: auto;
-    margin-bottom: auto;
-    
-}
 .container input{
     display: block;
-    
+    padding: 0.42em 2em 0.42em 0.42em;
+    font-size: 1em;
+    background-color: #fcbf49;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-bottom:2px solid #2f3e46;
+    margin-bottom: 2em;
 }
-
+.signupForm label{
+    color: #ffffff;
+}
+.signupForm button{
+    margin-top: 1em;
+    padding: 1em 3em 1em 3em;
+    border: 3px solid #2f3e46;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #2f3e46;
+    transition: all 0.5s; 
+}
+.signupForm button:hover{
+    background-color: #ffffff;
+    color: #2f3e46;
+}
