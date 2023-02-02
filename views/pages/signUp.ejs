@@ -3,15 +3,15 @@
 <link rel="stylesheet" href="/stylesheets/signUp.css">
 <div class="container">
     <img src="/images/13.png" alt="img">
-    <form action="" class="signupForm">
+    <form action="/signUp" method="POST" class="signupForm">
         <label for="user-name">
             Name
         </label>
-        <input type="text" id="user-name">
+        <input type="text" id="user-name" name="name">
         <label for="user-email">
             Email
         </label>
-        <input type="email" id="user-email">
+        <input type="email" id="user-email" name="email">
         <button>Create account</button>
     </form>
 </div>

@@ -18,6 +18,12 @@ app.get('/', (req,res)=>{
 app.get('/signUp',(req,res)=>{
     res.render('pages/signUp');
 });
+app.post('/signUp',(req,res)=>{
+    const {name,email}=req.body;
+    console.log(name);
+    console.log(email);
+    res.redirect("/");
+})
 
 
 app.listen(port, function(){
