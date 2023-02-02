@@ -6,8 +6,8 @@
     flex-direction: row;
     background-color: #fcbf49;
     align-items:center;
-    border-radius: 1em;
-    padding: 2em 2em 3em 2em;
+    border-radius: 0.5em;
+    padding: 2.5em 2em 2.9em 2em;
 }
 .container img{
     height: 500px;
