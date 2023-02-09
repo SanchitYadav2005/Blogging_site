@@ -8,8 +8,8 @@ const mongoose = require("mongoose");
 const UserSchema = require('./schemaModels/userSchmea');
 
 // connecting database.
-mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://localhost:27017/test/blogsite");
+mongoose.set('strictQuery', false)
+mongoose.connect('mongodb://127.0.0.1:27017/test');
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
@@ -24,11 +24,10 @@ app.get('/', (req,res)=>{
 app.get('/signUp',(req,res)=>{
     res.render('pages/signUp');
 });
-app.post('/signUp',(req,res)=>{
+app.post('/signUp',async(req,res)=>{
     const {name,email}=req.body;
     const user = new UserSchema({name,email});
-    console.log(user)
-    
+    await user.save();
     res.redirect("/");
 })
 
