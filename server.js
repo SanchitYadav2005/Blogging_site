@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const mongoose = require("mongoose");
 
 // connecting database.
+mongoose.set('strictQuery', false);
 mongoose.connect("mongodb://localhost:27017/test/blogsite");
 
 app.engine('ejs', ejsMate);
