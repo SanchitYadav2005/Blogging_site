@@ -5,6 +5,7 @@ const port = 8080;
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require("mongoose");
+const UserSchema = require('./schemaModels/userSchmea');
 
 // connecting database.
 mongoose.set('strictQuery', false);
@@ -25,8 +26,9 @@ app.get('/signUp',(req,res)=>{
 });
 app.post('/signUp',(req,res)=>{
     const {name,email}=req.body;
-    console.log(name);
-    console.log(email);
+    const user = new UserSchema({name,email});
+    console.log(user)
+    
     res.redirect("/");
 })
 
