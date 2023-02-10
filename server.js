@@ -28,8 +28,9 @@ app.post('/signUp',async(req,res)=>{
     const {name,email}=req.body;
     const user = new UserSchema({name,email});
     await user.save();
-    res.redirect("/");
-})
+    res.render('pages/createAccount', {user});
+});
+
 
 
 app.listen(port, function(){
