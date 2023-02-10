@@ -1,0 +1,17 @@
+.container{
+    margin-top: 4em;
+}
+
+.container h1{
+    margin-bottom: 1em;
+    color: #ffb703;
+}
+
+label{
+    font-weight:600;
+}
+.btn{
+    margin-left: 40%;
+    margin-top: 0.5em;
+    padding: 1em 5em 1em 5em;
+}
