@@ -27,9 +27,9 @@ app.get('/createAccount', (req,res)=>{
 });
 app.post('/createAccount', async(req,res)=>{
     const {fname,lname, email,password,mobile,city,country}= req.body;
-    const user = new User({fname:fname, lname:lname, email:email, password:password, mobile:mobile, city:city, country:country});
+    const user = new User({fname,lname, email, password, mobile, city, country});
     await user.save();
-    res.send(user);
+    res.send("working");
 });
 
 
