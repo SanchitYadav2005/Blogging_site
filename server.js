@@ -24,11 +24,8 @@ app.get('/', (req,res)=>{
 app.get('/signUp',(req,res)=>{
     res.render('pages/signUp');
 });
-app.post('/signUp',async(req,res)=>{
-    const {name,email}=req.body;
-    const user = new UserSchema({name,email});
-    await user.save();
-    res.render('pages/createAccount', {user});
+app.get('/createAccount', async(req,res)=>{
+    res.render('pages/createAccount');
 });
 
 
