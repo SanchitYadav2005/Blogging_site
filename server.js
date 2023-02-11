@@ -5,7 +5,8 @@ const port = 8080;
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require("mongoose");
-const UserSchema = require('./schemaModels/userSchmea');
+const User = require('./schemaModels/userSchmea');
+
 
 // connecting database.
 mongoose.set('strictQuery', false)
@@ -25,11 +26,10 @@ app.get('/createAccount', (req,res)=>{
     res.render('pages/createAccount');
 });
 app.post('/createAccount', async(req,res)=>{
-    const {fname,lname, email}= req.body;
-    console.log(fname);
-    console.log(lname);
-    console.log(email);
-    res.send("working");
+    const {fname,lname, email,password,mobile,city,country}= req.body;
+    const user = new User({fname:fname, lname:lname, email:email, password:password, mobile:mobile, city:city, country:country});
+    await user.save();
+    res.send(user);
 });
 
 
