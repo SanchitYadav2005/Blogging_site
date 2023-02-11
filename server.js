@@ -9,7 +9,7 @@ const UserSchema = require('./schemaModels/userSchmea');
 
 // connecting database.
 mongoose.set('strictQuery', false)
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+mongoose.connect('mongodb://127.0.0.1:27017/blogsite');
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
@@ -21,11 +21,15 @@ app.use(methodOverride("_method"));
 app.get('/', (req,res)=>{
     res.render('pages/home');
 });
-app.get('/signUp',(req,res)=>{
-    res.render('pages/signUp');
-});
-app.get('/createAccount', async(req,res)=>{
+app.get('/createAccount', (req,res)=>{
     res.render('pages/createAccount');
+});
+app.post('/createAccount', async(req,res)=>{
+    const {fname,lname, email}= req.body;
+    console.log(fname);
+    console.log(lname);
+    console.log(email);
+    res.send("working");
 });
 
 
