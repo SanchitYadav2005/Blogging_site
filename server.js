@@ -29,9 +29,13 @@ app.post('/createAccount', async(req,res)=>{
     const {fname,lname, email,password,mobile,city,country}= req.body;
     const user = new User({fname,lname, email, password, mobile, city, country});
     await user.save();
-    res.send("working");
+    res.redirect(`/${user._id}/profile`);
 });
-
+app.get('/:id/profile', async(req,res)=>{
+    const {id} = req.params;
+    const user = await User.findById(id);
+    res.render('pages/profile', {user});
+});
 
 
 app.listen(port, function(){
