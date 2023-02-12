@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+.card{
+    text-align: center;
+    margin: 4em 10em 1em 10em;
+    font-family: 'Comfortaa', cursive;
+}
+.card-img img{
+    width: 25%;
+    height: 40%;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.card-footer{
+    margin-top: 2em;
+}
+a{
+    text-decoration: none;
+    border-radius: 0.3em;
+    font-size: 1.3em;
+    margin-right: 1em;
+    padding: 0.3em 2em 0.3em 2em;
+    transition: all 0.5s;
+}
+.back{
+    border: 2px solid #e63946;
+    color: #e63946;
+}
+.back:hover{
+    background-color: #e63946;
+    color: #ffffff;
+}
+.blog{
+    border: 2px solid #2b9348;
+    color: #2b9348;
+}
+.blog:hover{
+    background-color: #2b9348;
+    color: #ffffff;
+}
+.edit{
+    border: 2px solid #252422;
+    color: #252422;
+}
+.edit:hover{
+    background-color: #252422;
+    color: #ffffff;
+}

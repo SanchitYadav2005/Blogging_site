@@ -1,4 +1,5 @@
 <title>Blogration | <%= user.fname %></title>
+<link rel="stylesheet" href="/stylesheets/profile.css">
 <div class="card">
   <div class="card-img">
     <img src="https://images.unsplash.com/photo-1676136358408-a54f22d57c0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=60" alt="">
@@ -9,5 +10,10 @@
   <div class="card-main">
     <blockquote class="user-mobile"><%= user.mobile %></blockquote>
     <address class="user-address"><%= user.city %>, <%= user.country %></address>
+  </div>
+  <div class="card-footer">
+    <a href="/" class="back">Back</a>
+    <a href="" class="blog">Create your blog</a>
+    <a href="" class="edit">Edit</a>
   </div>
 </div>
