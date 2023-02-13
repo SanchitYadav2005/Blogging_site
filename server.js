@@ -6,6 +6,9 @@ const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require("mongoose");
 const User = require('./schemaModels/userSchmea');
+const {storage} = require('./cloudinary/index');
+const multer = require("multer");
+const upload = multer({storage});
 
 
 // connecting database.
@@ -25,9 +28,9 @@ app.get('/', (req,res)=>{
 app.get('/createAccount', (req,res)=>{
     res.render('pages/createAccount');
 });
-app.post('/createAccount', async(req,res)=>{
-    const {fname,lname, email,password,mobile,city,country}= req.body;
-    const user = new User({fname,lname, email, password, mobile, city, country});
+app.post('/createAccount', upload.single('image'),async(req,res)=>{
+    const {image,fname,lname, email,password,mobile,city,country}= req.body;
+    const user = new User({image,fname,lname, email, password, mobile, city, country});
     await user.save();
     res.redirect(`/${user._id}/profile`);
 });
