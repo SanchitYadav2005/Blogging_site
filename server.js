@@ -24,21 +24,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(methodOverride("_method"));
 
 app.get('/',users.homePage);
-app.get('/createAccount', (req,res)=>{
-    res.render('pages/createAccount');
-});
-app.post('/createAccount', upload.single('image'),async(req,res)=>{
-    const {imgUrl,fname,lname, email,password,mobile,city,country}= req.body;
-    const user = new User({imgUrl,fname,lname, email, password, mobile, city, country});
-    await user.save();
-    console.log(user.imgUrl);
-    res.redirect(`/${user._id}/profile`);
-});
-app.get('/:id/profile', async(req,res)=>{
-    const {id} = req.params;
-    const user = await User.findById(id);
-    res.render('pages/profile', {user});
-});
+app.get('/createAccount', users.createAccount);
+app.post('/createAccount', upload.single('image'), users.uploadAccount);
+app.get('/:id/profile', users.showProfile);
 
 
 app.listen(port, function(){

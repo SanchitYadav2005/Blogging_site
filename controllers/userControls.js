@@ -1,3 +1,18 @@
 module.exports.homePage = ((req,res)=>{
     res.render('pages/home');
 });
+module.exports.createAccount = ((req,res)=>{
+    res.render('pages/createAccount');
+});
+module.exports.uploadAccount = (async(req,res)=>{
+    const {imgUrl,fname,lname, email,password,mobile,city,country}= req.body;
+    const user = new User({imgUrl,fname,lname, email, password, mobile, city, country});
+    await user.save();
+    console.log(user.imgUrl);
+    res.redirect(`/${user._id}/profile`);
+});
+module.exports.showProfile = (async(req,res)=>{
+    const {id} = req.params;
+    const user = await User.findById(id);
+    res.render('pages/profile', {user});
+});
