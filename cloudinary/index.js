@@ -1,18 +1,18 @@
-const cloudinary = require('cloudinary').v2;
-const {cloudinaryStroage} = require('multer-storage-cloudinary');
-// configered cloudinary 
+const cloudinary = require("cloudinary").v2;
+const {CloudinaryStorage} = require('multer-storage-cloudinary');
+
+// configured cloudinary using cloudinary moduel.
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
-    api_key:process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET
+    api_key: process.env.CLOUDINARY_KEY,
+    api_secret: process.env.CLOUDINARY_SECRET
 });
-// defining how the image will be stored
-
-const storage = new cloudinaryStroage({
+// added how to store and cofigure the file and format are accepted to store
+const storage = new CloudinaryStorage({
     cloudinary,
     params:{
-        folder: "blogsite",
-        allowedFormats:['jpeg', 'png', 'jpg']
+        folder: 'Blogsite',
+        allowedFormats: ['jpeg', 'png', 'jpg']
     }
 });
 
