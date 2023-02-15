@@ -9,6 +9,7 @@ const User = require('./schemaModels/userSchmea');
 const {storage} = require('./cloudinary/index');
 const multer = require("multer");
 const upload = multer({storage});
+const users = require('./controllers/userControls');
 
 
 // connecting database.
@@ -22,9 +23,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(methodOverride("_method"));
 
-app.get('/', (req,res)=>{
-    res.render('pages/home');
-});
+app.get('/',users.homePage);
 app.get('/createAccount', (req,res)=>{
     res.render('pages/createAccount');
 });
