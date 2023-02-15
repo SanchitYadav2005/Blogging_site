@@ -31,6 +31,7 @@ app.get('/createAccount', (req,res)=>{
 app.post('/createAccount', upload.single('image'),async(req,res)=>{
     const {image,fname,lname, email,password,mobile,city,country}= req.body;
     const user = new User({image,fname,lname, email, password, mobile, city, country});
+    user.image = req.files.map(p => ({url: p.path, filename: p.filename}))
     await user.save();
     res.redirect(`/${user._id}/profile`);
 });
