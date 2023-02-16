@@ -2,11 +2,13 @@ const express = require("express");
 const router = express.Router();
 const users = require('../controllers/userControls');
 
-router.get('/', users.homePage);
+router.route('/')
+      .get(users.homePage)
 
-router.get('/createAccount', users.createAccount)
-      .post('/createAccount', users.uploadAccount);
+router.route('/createAccount')
+     .get(users.createAccount)
+     .post(users.uploadAccount)
 
-router.get('/:id/profile', users.showProfile);
+router.get('/:id/profile', users.showProfile)
 
 module.exports = router;
