@@ -7,8 +7,8 @@ module.exports.createAccount = ((req,res)=>{
     res.render('pages/createAccount');
 });
 module.exports.uploadAccount = (async(req,res)=>{
-    const {imgUrl,fname,lname, email,password,mobile,city,country}= req.body;
-    const user = new User({imgUrl,fname,lname, email, password, mobile, city, country});
+    const {fname,lname, email,password,mobile,city,country}= req.body;
+    const user = new User({fname,lname, email, password, mobile, city, country});
     await user.save();
     res.redirect(`/${user._id}/profile`);
 });
