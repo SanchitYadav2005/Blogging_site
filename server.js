@@ -5,7 +5,8 @@ const port = 8080;
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require("mongoose");
-const users = require('./controllers/userControls');
+const usersRoute = require('./routes/userRoutes');
+
 
 
 // connecting database.
@@ -18,11 +19,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(methodOverride("_method"));
-
-app.get('/',users.homePage);
-app.get('/createAccount', users.createAccount);
-app.post('/createAccount', upload.single('image'), users.uploadAccount);
-app.get('/:id/profile', users.showProfile);
+app.use('/', usersRoute);
 
 
 app.listen(port, function(){
