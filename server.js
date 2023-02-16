@@ -5,10 +5,6 @@ const port = 8080;
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require("mongoose");
-const User = require('./schemaModels/userSchmea');
-const {storage} = require('./cloudinary/index');
-const multer = require("multer");
-const upload = multer({storage});
 const users = require('./controllers/userControls');
 
 

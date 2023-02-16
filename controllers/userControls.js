@@ -1,3 +1,5 @@
+const User = require('./schemaModels/userSchmea');
+
 module.exports.homePage = ((req,res)=>{
     res.render('pages/home');
 });
