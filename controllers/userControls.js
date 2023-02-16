@@ -10,7 +10,6 @@ module.exports.uploadAccount = (async(req,res)=>{
     const {imgUrl,fname,lname, email,password,mobile,city,country}= req.body;
     const user = new User({imgUrl,fname,lname, email, password, mobile, city, country});
     await user.save();
-    console.log(user.imgUrl);
     res.redirect(`/${user._id}/profile`);
 });
 module.exports.showProfile = (async(req,res)=>{
