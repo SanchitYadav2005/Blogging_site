@@ -5,7 +5,7 @@ const port = 8080;
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoose = require("mongoose");
-const usersRoute = require('./routes/userRoutes');
+const usersRoute = require('./routes/userRoutes')
 
 
 
