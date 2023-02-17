@@ -4,7 +4,7 @@ const {CloudinaryStorage} = require('multer-storage-cloudinary');
 // configured cloudinary using cloudinary moduel.
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_NAME,
-    api_key: process.env.CLOUDINARY_KEY,
+    api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_SECRET
 });
 // added how to store and cofigure the file and format are accepted to store
