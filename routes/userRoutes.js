@@ -10,7 +10,7 @@ router.route('/')
 
 router.route('/createAccount')
      .get(users.createAccount)
-     .post(users.uploadAccount, upload.single('image'));
+     .post(upload.array('image'), users.uploadAccount);
 
 router.get('/:id/profile', users.showProfile)
 

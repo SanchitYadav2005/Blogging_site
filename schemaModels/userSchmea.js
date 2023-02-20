@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const UserSchema = new Schema({
-    image:String,
+    image:[
+        {
+            url: String,
+            filename: String
+        }
+    ],
     fname: String,
     lname: String,
     email:String,
