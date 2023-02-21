@@ -1,21 +1,39 @@
-<title>Blogration | <%= user.fname %></title>
-<link rel="stylesheet" href="/stylesheets/profile.css">
-<div class="card">
-  <div class="card-img">
-    <% for(img of user.image) {%>
-      <img src="<%= img.url %>" alt="">
-    <% } %>
-  </div>
-  <div class="card-heading">
-    <h1><%= user.fname %> <%= user.lname %></h1>
-  </div>
-  <div class="card-main">
-    <blockquote class="user-mobile"><%= user.mobile %></blockquote>
-    <address class="user-address"><%= user.city %>, <%= user.country %></address>
-  </div>
-  <div class="card-footer">
-    <a href="/" class="back">Back</a>
-    <a href="" class="blog">Create your blog</a>
-    <a href="/<%= user._id %>/profile/edit" class="edit">Edit</a>
-  </div>
+<% layout('layouts/template_2') %> 
+<title>Blogration | Edit profile</title>
+<link rel="stylesheet" href="/stylesheets/createAccount.css">
+<div class="container">
+  <h1 class="text-center">Edit your profile</h1>
+  <form action="/<%= user._id %>/profile?_method=PUT" method="POST" enctype="multipart/form-data" class="row g-3">
+    <div class="col-md-12">
+      <label for="inputEmail4" class="form-label"></label>
+      <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg" class="img-input"  name ="image" id="inputFile4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">First name</label>
+      <input type="text" class="form-control"  id="inputEmail4" name="fname" value="<%= user.fname %>">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="inputEmail4" name="lname" value="<%= user.lname %>">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" name="email" value="<%= user.email %>">
+    </div>
+    <div class="col-md-4">
+      <label for="inputAddress" class="form-label">Mobile number</label>
+      <input type="number" class="form-control" id="inputAddress" name="mobile" value="<%= user.mobile %>">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Country</label>
+      <input type="text" class="form-control" id="inputCity" name="country" value="<%= user.country %>">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputZip" name="city" value="<%= user.city %>">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-outline-dark">Save changes</button>
+    </div>
+  </form>
 </div>

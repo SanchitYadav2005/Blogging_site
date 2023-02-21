@@ -13,6 +13,8 @@ router.route('/createAccount')
      .post(upload.array('image'), users.uploadAccount);
 
 router.get('/:id/profile', users.showProfile);
-router.get('/:id/profile/edit', users.editProfile);
+router.route('/:id/profile/edit')
+      .get(users.editProfile)
+      .put(users.putEditedProfile)
 
 module.exports = router;
