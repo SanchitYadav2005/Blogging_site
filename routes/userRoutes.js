@@ -12,9 +12,9 @@ router.route('/createAccount')
      .get(users.createAccount)
      .post(upload.array('image'), users.uploadAccount);
 
-router.get('/:id/profile', users.showProfile);
-router.route('/:id/profile/edit')
-      .get(users.editProfile)
-      .put(users.putEditedProfile)
+router.route('/:id/profile')
+      .get(users.showProfile)
+      .put(upload.array('image'),users.putEditedProfile)
+router.get('/:id/profile/edit', users.editProfile)
 
 module.exports = router;
