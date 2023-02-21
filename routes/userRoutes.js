@@ -16,5 +16,6 @@ router.route('/:id/profile')
       .get(users.showProfile)
       .put(upload.array('image'),users.putEditedProfile)
 router.get('/:id/profile/edit', users.editProfile)
+router.get('/createBlog', users.createBlog)
 
 module.exports = router;

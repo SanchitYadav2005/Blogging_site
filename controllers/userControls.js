@@ -29,3 +29,6 @@ module.exports.putEditedProfile = async(req,res)=>{
     await user.save();
     res.redirect(`/${user._id}/profile`);
 }
+module.exports.createBlog = (req,res)=>{
+    res.render('pages/createBlog');
+}
