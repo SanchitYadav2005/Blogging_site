@@ -1,0 +1,21 @@
+<title>Blogration | <%= user.fname %></title>
+<link rel="stylesheet" href="/stylesheets/profile.css">
+<div class="card">
+  <div class="card-img">
+    <% for(img of user.image) {%>
+      <img src="<%= img.url %>" alt="">
+    <% } %>
+  </div>
+  <div class="card-heading">
+    <h1><%= user.fname %> <%= user.lname %></h1>
+  </div>
+  <div class="card-main">
+    <blockquote class="user-mobile"><%= user.mobile %></blockquote>
+    <address class="user-address"><%= user.city %>, <%= user.country %></address>
+  </div>
+  <div class="card-footer">
+    <a href="/" class="back">Back</a>
+    <a href="" class="blog">Create your blog</a>
+    <a href="/<%= user._id %>/profile/edit" class="edit">Edit</a>
+  </div>
+</div>
