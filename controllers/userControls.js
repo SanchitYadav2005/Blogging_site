@@ -17,3 +17,8 @@ module.exports.showProfile = async(req,res)=>{
     const user = await User.findById(id);
     res.render('pages/profile', {user});
 };
+module.exports.editProfile = async(req,res)=>{
+    const {id} = req.params;
+    const user = await User.findById(id);
+    res.render('pages/editProfile', {user});
+}
