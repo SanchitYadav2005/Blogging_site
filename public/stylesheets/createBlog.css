@@ -1,16 +1,31 @@
+h1{
+    margin-left: 36%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #fcbf49;
+}
+.banner{
+    margin-bottom: 5em;
+}
 .banner-img{
     width: 10%;
     cursor: pointer;
 }
 .banner-upload-btn{
-    margin-top: 5em;
+    margin-top: 4em;
     margin-left: 45%;
 }
-
+.blog{
+    margin: 0 10em 0 10em;
+}
 .blog-area{
     border: hidden;
     /* used resize none to remove the resizer in the text area. */
     resize: none;
+    width: 100%;
+    height: fit-content;
+    /* used overflow hidden to remove the scroll bars from the text area . */
+    overflow:hidden;
 }
 /* used :focus to remove the outline when we click on the text area. */
 .blog-area:focus{
