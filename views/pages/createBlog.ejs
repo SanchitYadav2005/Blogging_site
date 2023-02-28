@@ -1,6 +1,13 @@
 <% layout('layouts/template_2') %>
-<link rel="stylesheet" href="/stylesheets/createBlog.css">
-<div class="banner">
-    <input type="file" accept="image/*" id="banner-upload" hidden>
-    <label for="banner-upload" class="banner-upload-btn"><img src="/images/upload.png" class="banner-img" alt=""></label>
-</div>
+    <link rel="stylesheet" href="/stylesheets/createBlog.css">
+    <div class="banner">
+            <input type="file" accept="image/*" id="banner-upload" hidden>
+            <label for="banner-upload" class="banner-upload-btn"><img src="/images/upload.png" class="banner-img"
+            alt=""></label>
+    </div>
+    <div class="blog-title">
+        <textarea name="blogTitle" id="blog-title" class="blog-area" placeholder="Blog title ..."></textarea>
+    </div>
+    <div class="blog-text">
+        <textarea name="" id="blog-text" class="blog-area" placeholder="Write your blog here ...."></textarea>
+    </div>

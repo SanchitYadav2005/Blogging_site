@@ -6,3 +6,13 @@
     margin-top: 5em;
     margin-left: 45%;
 }
+
+.blog-area{
+    border: hidden;
+    /* used resize none to remove the resizer in the text area. */
+    resize: none;
+}
+/* used :focus to remove the outline when we click on the text area. */
+.blog-area:focus{
+    outline: none;
+}
