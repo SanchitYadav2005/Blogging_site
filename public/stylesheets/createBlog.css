@@ -25,9 +25,48 @@ h1{
     width: 100%;
     height: fit-content;
     /* used overflow hidden to remove the scroll bars from the text area . */
-    overflow:hidden;
+    overflow: hidden;
+    
 }
 /* used :focus to remove the outline when we click on the text area. */
 .blog-area:focus{
     outline: none;
+}
+textarea::-webkit-scrollbar{
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.blog-title,
+#blog-text{
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    outline: none;
+    font-size: 50px;
+    font-weight: 600;
+    color: #2d2d2d;
+    resize: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.blog-title::placeholder,
+#blog-text::placeholder{
+    color: #2d2d2d;
+}
+
+#blog-text{
+    height: 500px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    padding-bottom: 100px;
+    white-space: pre-wrap;
 }
